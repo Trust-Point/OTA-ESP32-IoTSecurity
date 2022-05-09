@@ -12,6 +12,7 @@ Hardware:
 * An ESP32 board with ESP Revision 1; 
 * USB cable - USB A / micro USB B.
 * Computer running Windows, Linux, or macOS.
+* Test
 
 ## Getting Started 
 ### <a name="What we provide"></a>What we provide
