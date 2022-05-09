@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/Users/TP1011/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader",
+    "config_file":        "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.3-dirty",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/Users/TP1011/esp/esp-idf/components/efuse/Kconfig;/Users/TP1011/esp/esp-idf/components/esp32/Kconfig;/Users/TP1011/esp/esp-idf/components/esp_common/Kconfig;/Users/TP1011/esp/esp-idf/components/esp_system/Kconfig;/Users/TP1011/esp/esp-idf/components/log/Kconfig;/Users/TP1011/esp/esp-idf/components/newlib/Kconfig;/Users/TP1011/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/TP1011/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/TP1011/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/TP1011/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/TP1011/esp/esp-idf/components/bootloader", "/Users/TP1011/esp/esp-idf/components/bootloader_support", "/Users/TP1011/esp/esp-idf/components/efuse", "/Users/TP1011/esp/esp-idf/components/esp32", "/Users/TP1011/esp/esp-idf/components/esp_common", "/Users/TP1011/esp/esp-idf/components/esp_hw_support", "/Users/TP1011/esp/esp-idf/components/esp_rom", "/Users/TP1011/esp/esp-idf/components/esp_system", "/Users/TP1011/esp/esp-idf/components/esptool_py", "/Users/TP1011/esp/esp-idf/components/hal", "/Users/TP1011/esp/esp-idf/components/log", "/Users/TP1011/esp/esp-idf/components/bootloader/subproject/main", "/Users/TP1011/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/TP1011/esp/esp-idf/components/newlib", "/Users/TP1011/esp/esp-idf/components/partition_table", "/Users/TP1011/esp/esp-idf/components/soc", "/Users/TP1011/esp/esp-idf/components/spi_flash", "/Users/TP1011/esp/esp-idf/components/xtensa", "" ]
+}

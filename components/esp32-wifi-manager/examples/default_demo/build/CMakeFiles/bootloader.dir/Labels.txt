@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/CMakeFiles/bootloader
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/CMakeFiles/bootloader.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/CMakeFiles/bootloader-complete.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

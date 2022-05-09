@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/TP1011/esp/OTABasic/components/esp32-wifi-manager/examples/default_demo/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
