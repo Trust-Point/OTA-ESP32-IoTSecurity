@@ -92,12 +92,12 @@ next we have to activate the security Feature by:
 * enable signed app image with Signing Schema ECDSA
 * change file at "signe binaries durign build " to ESPTest01.key
   * To get the signing Key follow the instruction at [Instruction how to get the Key](#getSigningKey)
-    ![](/resources/SecurityFeature.png)
+![](/resources/SecurityFeature.png)
 
 
-* setup your Development enviroment
-* configure the ESP-IDF with the idf.py tool
-* Add partifion Table configuration and offset
+next we configure the OTA Download Server url: https://trust-point.com/resources/OTA/OTABasic.bin
+![](/resources/DownloadServer.png)
+
 
 ### <a name="onboarding"></a>onboarding to you Network
 * Connect your ESP Board 
