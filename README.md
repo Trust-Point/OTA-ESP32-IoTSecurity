@@ -12,7 +12,6 @@ Hardware:
 * An ESP32 board with ESP Revision 1; 
 * USB cable - USB A / micro USB B.
 * Computer running Windows, Linux, or macOS.
-* Test
 
 ## Getting Started 
 ### <a name="What we provide"></a>What we provide
@@ -87,13 +86,13 @@ idf.py menuconfig
 ```
 configure the partition Table, with factory app and two OTA definition and set the offset to 0x10000. 
 (Due to the fact that we are depoying a signed Bootloader image the have to expand the offse)
-![](/Users/TP1011/esp/ESP_OTABasic/resources/PartitionTable.png)
+![](/resources/PartitionTable.png)
 
 next we have to activate the security Feature by: 
 * enable signed app image with Signing Schema ECDSA
 * change file at "signe binaries durign build " to ESPTest01.key
   * To get the signing Key follow the instruction at [Instruction how to get the Key](#getSigningKey)
-    ![](/Users/TP1011/esp/ESP_OTABasic/resources/SecurityFeature.png)
+    ![](/resources/SecurityFeature.png)
 
 
 * setup your Development enviroment
