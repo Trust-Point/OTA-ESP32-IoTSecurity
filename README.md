@@ -1,4 +1,4 @@
-# IoT Device Security in der Praxis
+# IoT Device Security in practice
 Enabling security features for IoT devices, especially when you want to take advantage of the microcontroller's built-in functions
 and features of the microcontroller, can be challenging. This project will help you understand the built-in security feature 
 of an ESP32 MCU and provide you with tools and mechanisms to enable these functions at scale.
@@ -89,17 +89,27 @@ configure the partition Table, with factory app and two OTA definition and set t
 ![](/resources/PartitionTable.png)
 
 next we have to activate the security Feature by: 
-* enable signed app image with Signing Schema ECDSA
+* enable hardware Secure Boot in bootloader
+  * please select secure Boot version 1
 * change file at "signe binaries durign build " to ESPTest01.key
   * To get the signing Key follow the instruction at [Instruction how to get the Key](#getSigningKey)
 ![](/resources/SecurityFeature.png)
-
 
 next we configure the OTA Download Server url: https://trust-point.com/resources/OTA/OTABasic.bin
 ![](/resources/DownloadServer.png)
 
 
 ### <a name="onboarding"></a>onboarding to you Network
+To onboard your ESP32 board to your prefered wifi we are providing an auto-onboarding tool.
+
+Note: This process is only activated since no SSID and PW is stored in the ESP flash. If crendential s
+are found in the falsh memory the esp is booting directly into the active app.
+
+Please connect your ESP Board with the USB cable to your port.
+The ESP Board will open a wifi called esp32. Please connect. 
+The Wifi manager will auto launch: 
+
+
 * Connect your ESP Board 
 * Launch the Onboarding Application
 * configure your Network 
