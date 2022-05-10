@@ -16,9 +16,10 @@ Hardware:
 ## Getting Started 
 ### <a name="What we provide"></a>What we provide
 Within this repository we provide you with a development framework, which allows you to build applications (app)
-with integrated OTA functionality. Furthermore we have integrated the Wifi Onboarding mechanism based on the [ESP32-Wifi-Manager](https://github.com/tonyp7/esp32-wifi-manager).
+with integrated OTA functionality. Furthermore we have integrated the Wifi Onboarding mechanism based on the [ESP32-Wifi-Manager](https://github.com/tonyp7/esp32-wifi-manager)
 
 ###Getting started with a your personal Board:
+
 You have visited us at our booths at Hannover Messe or RSA Show and you are holding one of the ESP32 NodeMCU kit?
 Then follow the steps below:
 
