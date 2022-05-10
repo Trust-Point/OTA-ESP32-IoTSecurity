@@ -60,15 +60,16 @@ Then follow the steps below:
   * start the OTA process
   * verfiy signatur and change partition table and 
 
-###Development Process: 
+### Development Process: 
 
-####Generate new Application without cleaning Wifi Parameter
-build and flash process
+#### Generate new Application without cleaning Wifi Parameter
+To generate a new version please follow the description in the [section](#generateApplication) below.
 
 ####Generate new Application with clean Wifi Paramter
-erase Flash 
-Flash Bootloader
-build and flash process
+If you would like to reset all parameter including Wifi Credetial, you have to perform the following steps: 
+1. [Erase the flash memory an load the Bootloader](#flashBootloader)
+2. [build you application](#generateApplication)
+3. [flash you application](#flashApplication)
 
 
 ## Information
