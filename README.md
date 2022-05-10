@@ -71,7 +71,7 @@ build and flash process
 
 
 ## Information
-####  <a name="configure_ESPIDF"></a>configure your ESP-IDF
+###  <a name="configure_ESPIDF"></a>configure your ESP-IDF
 After succesfully installation of the ESP-IDF goto your home directory and run the export script
 ```console
 . $HOME/esp/esp-idf/export.sh
@@ -80,54 +80,105 @@ now you are able to execute idf.py to setup the type:
 ```console
 idf.py set-target esp32
 ```
-now we are ready to launch the idf.py UI to configure the ESP-IDF.
+now you are ready to launch the idf.py UI to configure the ESP-IDF.
 ```console
 idf.py menuconfig  
 ```
 configure the partition Table, with factory app and two OTA definition and set the offset to 0x10000. 
-(Due to the fact that we are depoying a signed Bootloader image the have to expand the offse)
+(Due to the fact that we are depolying a signed Bootloader image the have to expand the offset)
 ![](/resources/PartitionTable.png)
 
 next we have to activate the security Feature by: 
 * enable hardware Secure Boot in bootloader
   * please select secure Boot version 1
-* change file at "signe binaries durign build " to ESPTest01.key
-  * To get the signing Key follow the instruction at [Instruction how to get the Key](#getSigningKey)
+* change file at "signed binaries during build " to "ESPTest01.key"
+  * > **_Note_**: To get the signing Key follow the instruction at: [Instruction how to get the Key](#getSigningKey)
 ![](/resources/SecurityFeature.png)
 
-next we configure the OTA Download Server url: https://trust-point.com/resources/OTA/OTABasic.bin
+next we configure the OTA Download Server with the following url: https://trust-point.com/resources/OTA/OTABasic.bin
 ![](/resources/DownloadServer.png)
 
 
-### <a name="onboarding"></a>onboarding to you Network
-To onboard your ESP32 board to your prefered wifi we are providing an auto-onboarding tool.
+### <a name="onboarding"></a>Onboarding to your Network
+To onboard your ESP32 board to your preferred wifi network we are providing an Onboarding procedure.
 
-Note: This process is only activated since no SSID and PW is stored in the ESP flash. If crendential s
-are found in the falsh memory the esp is booting directly into the active app.
+>**_Note:_**
+This process is only active while no SSID and PW is stored in the ESP flash. If crendentials
+are found in the falsh memory the ESP is booting directly into the active app.
 
-Please connect your ESP Board with the USB cable to your port.
-The ESP Board will open a wifi called esp32. Please connect. 
-The Wifi manager will auto launch: 
+Please follow the steps below:
+1. Connect your ESP Board with the USB cable to your USB port.
+2. The ESP Board will open a Wifi-AccessPoint called esp32. Please connect. 
+3. The Wifi manager will auto launch: 
+   1. Select your preferred Network
+   2. Enter your Access-code
+4. Press Join the network. 
 
-
-* Connect your ESP Board 
-* Launch the Onboarding Application
-* configure your Network 
+The ESP will store the Network credential in the flash memory, and he will automaticaly reboot.
+To verify that everything worked well go back to your Terminal and start the monitor
+````console
+idf.py idf.py -p <yourPortID>  monitor 
+````
+You will see the following boot sequence: 
+![](/resources/firstStart.png)
 
 ### <a name="monitorApplication"></a>Monitor Application
-Monitor Application
+To Monitor the debug Message you have to connect your Computer with the ESP with the USB cable. 
+[Configure your ESP-IDF](#configure_ESPIDF) and than start the monitor with: 
+````console
+idf.py idf.py -p <yourPortID>  monitor 
+````
 
 ### <a name="OTAprocess"></a>OTA process
-* OTA process
+Over-the-air (OTA) firmware updates are a Over-the-air (OTA) firmware updates are an important component of any IoT system. Over-the-air firmware updates refer to the practice of updating an embedded device's code remotely.
+In our sample application, we use a static link to a download server with a user-triggered activation. 
+* We entered the URL of the download server as part of the ESP-IDF configuration. ([Configure your ESP-IDF](#configure_ESPIDF))
+* connect our Monitor to the ESP ([monitor your Application](#monitorApplication))
+* Pressing the **Boot Button** at the ESP will trigger the Download Process. You will see the following sequence:
+![](/resources/OTAStart.png)
+
+The last step of the download process is the verification of the App Signatur
+![](/resources/OTASigVerified.png)
+
+After rebooting the ESP you the new image is and activated: 
+![](/resources/OTAReboot.png)
+
 
 ### <a name="flashBootloader"></a>Flash Bootloader
-Flash Bootloader
+Due to the activated Secure Boot process and the signed app feature wer are providing a preconfigured second stage Bootloader Image
+You can only flash the second stage bootloader because it is loaded in flash memory. 
+Please follow the steps below: 
+1. Erase the whole flash memory
+>**_Note:_**
+This will also delete the stored wifi credentials and you have to run through the onboarding process ([onboarding to you Network](#onboarding))
+````console
+idf.py -p <yourPortID>  erase_flash
+````
+2. Load the signed Bootloader with the public signing key
+````console
+esptool.py write_flash  0x0 bootloaderSignedESPTest01.bin   
+````
+>**_Note:_**
+If you reload the boot loader, you have to delete the flash memory completely in any case. Since it can possibly come to address range overlaps.
 
 ### <a name="generateApplication"></a>generate Application
-generate Application 
+
+1. clean your Build directory
+````console
+idf.py fullclean   
+````
+2. Rebuild the application
+````console
+idf.py build    
+````
+ 
 
 ### <a name="flashApplication"></a>flash Application
-flash Application
+1. Flash application and start the Monitor
+````console
+idf.py flash monitor    
+````
+
 
 #### <a name="getSigningKey"></a>Get the code Signing Key
 So that you are able to integrate extension and new functions into the provided app you need the signature key for the app.
