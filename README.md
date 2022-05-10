@@ -18,7 +18,7 @@ Hardware:
 Within this repository we provide you with a development framework, which allows you to build applications (app)
 with integrated OTA functionality. Furthermore we have integrated the Wifi Onboarding mechanism based on the [ESP32-Wifi-Manager](https://github.com/tonyp7/esp32-wifi-manager)
 
-###Getting started with a your personal Board:
+### Getting started with a your personal Board
 
 You have visited us at our booths at Hannover Messe or RSA Show and you are holding one of the ESP32 NodeMCU kit?
 Then follow the steps below:
@@ -38,7 +38,7 @@ Then follow the steps below:
   * start the OTA process
   * verfiy signatur and change partition table and 
 
-###Getting started with a clean development Board
+### Getting started with a clean development Board
 * [configure your ESP-IDF](#configure_ESPIDF):
   * setup your Development enviroment
   * configure the ESP-IDF with the idf.py tool
